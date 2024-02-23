@@ -1,0 +1,24 @@
+@baseUrl=https://hqxw5k53sd.execute-api.us-east-1.amazonaws.com/dev/
+
+###
+GET {{baseUrl}}api/v1/reminders
+
+### 
+POST {{baseUrl}}api/v1/reminders
+
+{
+  "id": "asdfasdf-232A3434",
+  "title": "task title 3"
+}
+
+### 
+GET {{baseUrl}}api/v1/reminders/8e832063-1b65-4021-9735-d885192c73ca
+
+###
+DELETE {{baseUrl}}api/v1/reminders/uuid 
+
+###
+PUT {{baseUrl}}api/v1/reminders/status/uuid
+
+###
+PUT {{baseUrl}}api/v1/reminders/flag/uuid

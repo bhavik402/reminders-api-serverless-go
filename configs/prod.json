@@ -1,0 +1,32 @@
+{
+  "region": "us-east-1",
+  "stack": {
+    "id": "RemindersAPIStackId",
+    "name": "RemindersAPIStack"
+  },
+  "apiGateway": {
+    "id": "ReminderAPIGatewayID",
+    "name": "RemindersAPI",
+    "stage": "prod"
+  },
+  "lambda": {
+    "executionRole": "RemindersLambdaExecutionRole",
+    "name": "RemindersFunction"
+  },
+  "dynamo": {
+    "id": "DynamoTableReminders",
+    "name": "Reminders",
+    "partitionKey": "pk",
+    "sortKey": "sk"
+  },
+  "managedPolicies": [
+    {
+      "name": "AmazonDynamoDBFullAccess",
+      "arn": "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess"
+    },
+    {
+      "name": "AWSLambdaBasicExecutionRole",
+      "arn": "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+    }
+  ]
+}
